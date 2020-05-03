@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#button-1").click(function(){
+		alert("id selector button 1");
+		console.log("ready");
+	});
+	
+	$(function(){
+		$(".button").click(function(){
+			alert("class selector button 2");
+		});
+	});
+});
+
+</script>
+</head>
+<body>
+<p>
+	<h5>RECOGNISING AND USING SELECTORS</h5>
+</p>
+
+<button id="button-1">Button 1</button>
+<button id="button2" class = "button">Button 2</button>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>INSERTING AN ELEMENT</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$("#my-button").click(function(){
+		$("#option-A").append(createInputElement("appended Element"));
+		$("#option-B").prepend(createInputElement("prepended Element"));
+		$("#option-C").after(createInputList("after Element"));
+		$("#option-D").before(createInputList("before Element"));
+	});
+});
+
+function createInputElement(value){
+	var element = "<input type='text' value='"+value+"'>";
+		return element;
+}
+
+function createInputList(value){
+	var element = "<li> "+value+"</li>";
+	return element;
+}
+
+</script>
+</head>
+<body>
+<p>
+	<h5>INSERTING AN ELEMENT</h5>
+</p>
+
+<button id="my-button">Click me</button>
+
+<ul>
+	<li id="option-A">Option A</li>
+	<li id="option-B">Option B</li>
+	<li id="option-C">Option C</li>
+	<li id="option-D">Option D
+		<ul>
+			<li>Sub Option 1</li>
+			<li>Sub Option 2</li>
+		</ul>	
+	</li>
+</ul>
+
+</body>
+</html>

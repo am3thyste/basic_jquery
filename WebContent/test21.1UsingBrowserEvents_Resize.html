@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Using Browser Events - Resize</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+var x = 0;
+$(function(){
+	console.log("ready");
+	
+	$(window).resize(function(){
+	$(".my-class").append('<p>Resize event called </p>');
+	    $("span").text(x += 1);
+
+
+});
+
+});
+
+
+
+</script>
+
+<style>
+.my-class{
+padding: 10px;
+border: 1px solid black;
+}
+
+</style>
+</head>
+<body>
+<p>
+	<h5>Using Browser Events - Resize</h5>
+</p>
+
+<p class="my-class">
+</p>
+
+<p>Window resized <span>0</span> times.</p>
+<p>Try resizing your browser window.</p>
+</body>
+</html>

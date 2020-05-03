@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BINDING EVENTS DYNAMICALLY</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	console.log("ready");
+	/*$(".button1").on('click', function(){
+		$(this).next('div.light').toggleClass('red');
+	});
+	*/
+	
+	/*
+	$(".button1").on('click', function(event){
+		$(this).next('div.light').toggleClass('red');
+		console.log(event.type);
+	});
+	*/
+	
+	$(".button1").one('click', function(event){
+		$(this).next('div.light').toggleClass('red');
+		console.log(event.type);
+	});
+	
+	$(".button2").on('click', function(){
+		$(this).next('div.light').toggleClass('green');
+		$(".button1").trigger('click');
+	});
+});
+</script>
+
+<style>
+.box{
+padding: 10px;
+border: 1px solid;
+}
+
+.light{
+height: 100px;
+width: 100px;
+border: 1px solid;
+display: block;
+}
+
+.red{
+background: red;
+}
+
+.green{
+background: green;
+}
+
+
+
+</style>
+</head>
+<body>
+<p>
+	<h5>Binding events dynamically</h5>
+</p>
+
+<div class="box">
+	<button class="button1">Button 1</button>
+	<div class="light"></div>	
+	<button class=button2>Button 2</button>
+	<div class="light"></div>
+</div>
+
+
+
+
+</body>
+</html>

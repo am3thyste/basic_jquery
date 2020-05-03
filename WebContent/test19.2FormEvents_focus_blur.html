@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FORM EVENTS - FOCUS - BLUR</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+console.log("ready");	
+
+$(".name").focus(function(){
+	$(this).next('div').toggleClass('green');
+});
+
+$(".name").blur(function(){
+	$(this).next('div').toggleClass('red');	
+});
+
+$("button").click(function(){
+	$(".name").trigger('focus');
+});
+});
+
+</script>
+
+<style>
+.box{
+padding: 10px;
+border: 1px solid;
+}
+
+.my-container{
+height: 100px;
+width: 100px;
+display: block;
+border: 1px solid;
+
+}
+
+.green{
+background: green;
+}
+
+.red{
+background: red;
+}
+
+</style>
+</head>
+<body>
+<p>
+	<h5>FORM EVENTS - FOCUS - BLUR</h5>
+</p>
+
+<div class="box">
+<label for ="firstName">First Name</label>
+<input type="text" class="name" name="firstName">
+<div class ="my-container"></div>
+<button class="my-btton">Trigger Focus</button>
+
+</div>
+
+</body>
+</html>

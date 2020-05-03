@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+<title>GETTING THE CONTENTS OF AN ELEMENT</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	$("#my-button").click(function(){
+		alert($("#my-button").text());
+		alert($("#my-input").val());
+		alert($("#my-div").html());
+	});
+});
+
+</script>
+</head>
+<body>
+<p>
+	<h5>GETTING THE CONTENTS OF AN ELEMENT</h5>
+</p>
+<button id="my-button">Button</button>
+<div id = "my-div">
+<input id="my-input" type="text" placeholder="Enter your name">
+Welcome!</div>
+</body>
+</html>

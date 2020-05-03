@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link href="style2.css" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	console.log("ready");
+	$("#menu-toggle").click(function(){
+		$("#side-nav").slideToggle(1000);
+	});
+});
+
+</script>
+</head>
+<body>
+<header>
+	<img id="menu-toggle" src ="img/3lines.png" alt = "3 lines">
+</header>
+
+<div>
+<div id = "side-nav">
+<nav >
+	<ul>
+		<li><a href = "#"> </a> Home</li>
+		<li> <a href = "#"></a>My Channel</li>
+		<li> <a href = "#"></a>Trending</li>
+		<li> <a href = "#"></a>Subscriptions</li>
+	</ul>
+	<ul>
+		<li> <p>Library</p> </li>
+		<li>  <a href = "#"></a> History</li>
+		<li> <a href = "#"></a>Watch Later</li>
+		<li> <a href = "#"></a>Purchases</li>
+		<li> <a href = "#"></a>jQuery</li>
+	</ul>
+</nav>
+
+</div>
+
+<div id= "info-content">
+	<span >
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+		dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+		ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+		fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
+		mollit anim id est laborum.
+	</span>
+</div>
+</div>
+</body>
+</html>

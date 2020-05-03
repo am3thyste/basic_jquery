@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SELECTING AND MANIPULATING ELEMENTS BY CLASS</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$("#my-button").click(function(){
+		$(".my-class").css("background-color", "red");
+	});
+});
+
+</script>
+</head>
+<body>
+<p>
+	<h5>SELECTING AND MANIPULATING ELEMENTS BY CLASS</h5>
+</p>
+
+<button id="my-button">Cick me</button>
+<br/>
+<div id="my-div1" class = "my-class">Div 1</div>
+<div id="my-div2" class="my-class">Div 2</div>
+</body>
+</html>

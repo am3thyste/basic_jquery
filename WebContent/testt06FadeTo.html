@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link href="style.css" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	console.log("ready");
+	$("#img-menu").click(function(){
+		$(".nav-menu").fadeTo(1000, 0.5, function(){
+			alert("hi there");
+		});
+	});
+});
+
+</script>
+</head>
+<body>
+<header>
+	<img id="img-menu" class = "class-3lines" src ="img/3lines.png" alt = "3 lines">
+</header>
+<p>
+	<h5></h5>
+</p>
+
+<div class = "nav-menu" id="div2">
+<nav class = "sidenav">
+	<ul style="list-style-type:none;">
+		<li><a class = "active" href = "#"> </a> Home</li>
+		<li> <a href = "#"></a>My Channel</li>
+		<li> <a href = "#"></a>Trending</li>
+		<li> <a href = "#"></a>Subscriptions</li>
+	</ul>
+</nav>
+
+<nav class = "sidenav">
+	<ul style="list-style-type:none;">
+		<li> <p>Library</p> </li>
+		<li>  <a href = "#"></a> History</li>
+		<li> <a href = "#"></a>Watch Later</li>
+		<li> <a href = "#"></a>Purchases</li>
+		<li> <a href = "#"></a>jQuery</li>
+	</ul>
+</nav>
+</div>
+</body>
+</html>

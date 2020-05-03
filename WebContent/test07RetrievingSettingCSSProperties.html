@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Retrieving and setting CSS properties</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$("#my-button").click(function(){
+		alert($("#my-div").css("width"));
+		$("#my-div").css("color", "blue").css("background-color", "yellow");
+	})
+})
+</script>
+</head>
+<body>
+<p>
+	<h5>RETRIEVENG AND SETTING CSS PROPERTIES</h5>
+</p>
+<button id="my-button">Button</button>
+	<div id="my-div">
+	Welcome!
+	</div>
+</body>
+</html>

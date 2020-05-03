@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>USING KEYBOARD EVENTS</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+/*$(function(){
+	console.log("Ready!");
+	$("#target input").keydown(function(event){
+	//	console.log("Key down"); 
+	
+	$("#target .inner").append(event.which + '<br/>');
+	});
+});
+*/
+
+/*$(function(){
+	console.log("Ready!");
+	$("#target input").keyup(function(event){
+	
+	$("#target .inner").append(event.which + '<br/>');
+	});
+});
+
+*/
+
+$(function(){
+	console.log("Ready!");
+	$("#target input").keypress(function(event){
+	
+	$("#target .inner").append(event.which + '<br/>');
+	});
+});
+
+
+//Shift, Ctrl, Delete -> keydown events, but not keypress events
+
+</script>
+
+<style>
+#target{
+border: 1px solid;
+padding: 10px;
+background-color: pink;
+}
+
+.toggle{
+backgroundcolor: yellow;
+}
+</style>
+
+</head>
+<body>
+<p>
+	<h5>Using Keyboard Events</h5>
+</p>
+
+<div id = "target">This is the target
+<br/>
+<label>Input</label>
+<input type = "text">
+<div class = "inner"></div>
+</div>
+
+
+
+</body>
+</html>

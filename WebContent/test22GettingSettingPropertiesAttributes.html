@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Getting And Setting Properties and Attributes</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	console.log("ready!");
+	$('.checkprops').click(function(){
+		$('.info').html("attr('checked'):" + $("input").attr('checked')
+				       +"<br/>prop('checked'):" + $("input").prop('checked'));
+	});
+	
+	$('.setprop').click(function(){
+		$('#check').prop("checked", true);
+	});
+});
+
+</script>
+
+<style>
+.box{
+border:1px solid black;
+padding: 15px;
+}
+.checkprops, .setprop{
+padding: 2px;
+border: 1px solid back;
+}
+
+</style>
+</head>
+<body>
+<p>
+	<h5>Getting And Setting Properties and Attributes</h5>
+</p>
+
+<div class="box">
+	<button class="checkprops">Check value of attr() and prop()</button>
+	<input id="check" type = "checkbox" checked = "checked">
+	<label for ="check">Check Me</label>
+	<div class="info">info</div>
+	<button class="setprop">Set prop('checked')</button>
+</div>
+</body>
+</html>

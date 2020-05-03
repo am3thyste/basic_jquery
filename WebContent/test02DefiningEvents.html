@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+<title>DEFINING EVENTS</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("#click-me-button").click(function(event){
+			$("#my-div").css("color", "red").animate({left: "+=50"});
+			console.log("ready!");
+	});
+});
+
+</script>
+</head>
+<body>
+<h5> DEFINING EVENTS</h5>
+<button id="click-me-button">Click me</button>
+<div id="my-div" style="width:200px; height: 200px; border:1px solid black; text-align:center;
+position: relative;">
+Watch me move!
+</div>
+</body>
+</html>

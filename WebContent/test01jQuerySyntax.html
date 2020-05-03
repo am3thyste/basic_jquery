@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery Syntax</title>
+<h2> JQuery Syntax</h2>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+var $q = jQuery.noConflict();
+$q(document).ready(function(){ 
+	
+	$q("#click-me-button").click(function(){
+		$q("#my-div").css("width", "300").css("height", "300");
+	});
+});
+
+
+</script>
+</head>
+<body>
+
+<button id="click-me-button">Click me</button>
+<div id="my-div" style="width:200px; height: 200px; border:1px solid black; text-align:center;">
+Watch me move!
+</div>
+<html>

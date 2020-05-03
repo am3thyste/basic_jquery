@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+div{
+	width:200px; height: 200px; border:1px solid black; text-align:center;
+position: relative; opacity:0.5; display: inline-block;
+}
+
+table, tr, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.class-3lines{
+	width: 20 px;
+	height: 20px;
+	
+}
+
+.sidenav {
+  background-color: #b7f2a5;
+  left : 50 px;
+}
+
+#div2{
+	display: inline-block;
+	opacity:100;
+	border: 1px solid white;
+	text-align:left;
+}

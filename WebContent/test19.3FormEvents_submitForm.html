@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FORM EVENTS - SUBMIT FORM</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	console.log("ready");
+	
+	$('.my-form').submit(function(event){
+	console.log("submit handler called");
+	event.preventDefault(); //delete this line, in order to see Default event (leave next line commented)
+//	event.preventDefault();
+
+	});
+	
+	$('.js-select').change(function(){
+		$('.my-form').submit();
+	})
+});
+
+</script>
+
+<style>
+.box{
+padding: 10px;
+border: 1px solid; 
+}
+</style>
+
+</head>
+<body>
+<p>
+	<h5>FORM EVENTS - SUBMIT FORM</h5>
+</p>
+
+<div class ="box">
+<form name = "myForm" class="my-form" action ="">
+	<label for="month">Month</label>
+	<select class="js-select" name="months">
+	<option value="1">January</option>
+	<option value="2">February</option>
+	<option value="3">March</option>
+	<option value="4">April</option>
+	</select>
+<input type="submit" name = "submit" value="Submit" class="my-submit"/>
+</form>
+
+</div>
+</body>
+</html>

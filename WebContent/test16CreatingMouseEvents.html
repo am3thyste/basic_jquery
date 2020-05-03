@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CREATING MOUSE EVENTS</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	console.log("ready");
+/*	$("#target").click(function(){
+		$(this).toggleClass('toggle');
+	});
+	*/
+	
+/*	$("#target").on('click', function(){
+		$(this).toggleClass('toggle');
+	});
+*/
+
+/*	$("#target").dblclick(function(){
+	$(this).toggleClass('toggle');
+});
+*/
+
+/*	$("#target").mouseenter(function(){
+		$(this).toggleClass('toggle');
+	});
+	*/
+
+/*	$("#target").mouseleave(function(){
+		$(this).toggleClass('toggle');
+	});
+*/
+
+	$("#target").hover(function(){
+		$(this).toggleClass('toggle');
+	});
+});
+
+
+</script>
+
+<style>
+
+#target{
+padding: 10px;
+border: 1px solid black;
+}
+
+.toggle{
+background-color: #aaa;
+}
+</style>
+</head>
+<body>
+<p>
+	<h5>Creating Mouse Events</h5>
+</p>
+
+<div id="target"> This is the target</div>
+</body>
+</html>

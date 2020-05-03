@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SETTING THE CONTENTS OF AN ELEMENT</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$("#my-button").click(function(){
+		$("#text-update").text("Welcome");
+		$("#value-update").val("text");
+		$("#HTML-update").html("<input type='text' placeholder='Enter your last name'>");
+	});
+});
+
+</script>
+</head>
+<body>
+<p>
+	<h5>SETTING THE CONTENTS OF AN ELEMENT</h5>
+</p>
+<button id="my-button">Click me</button>
+<table border="1" cellpadding="10">
+<tr>
+	<td>Text update</td>
+	<td>Value update</td>
+	<td>HTML update</td>
+</tr>
+
+<tr>
+	<td id ="text-update"></td>
+	<td> 
+		<input id="value-update" type="text" placeholder = "Enter your first name">
+	</td>
+	<td id="HTML-update"></td>
+</tr>
+
+
+</table>
+
+</body>
+</html>

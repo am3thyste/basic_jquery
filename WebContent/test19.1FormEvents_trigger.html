@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FORM EVENTS - TRIGGER</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	console.log("ready");
+	$(".js-select").change(function(){
+		console.log("Month changed");
+	});
+	
+	$(".trigger button").click(function(event){
+		$(".js-select").trigger('change');
+	});
+	
+});
+
+</script>
+
+
+<style>
+.box{
+padding: 10px;
+border: 1px solid; 
+}
+body
+{background-color:#e6f2ff;
+}
+
+</style>
+</head>
+<body>
+<%
+response.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
+%>
+
+<p>
+	<h5>FORM EVENTS - TRIGGER</h5>
+</p>
+
+<div class ="box">
+	<label for="month">Month</label>
+	<select class="js-select" name="months">
+	<option value="1">January</option>
+	<option value="2">February</option>
+	<option value="3">March</option>
+	<option value="4">April</option>
+	</select>
+	
+	<div class="trigger">
+	<button>Trigger Change</button>
+	</div>
+
+</div>
+</body>
+</html>

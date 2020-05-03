@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EXERCICE: CREATING AND MANIPULATING A WEB PAGE</title>
+<link href="style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	console.log("Started");
+	
+	$("#my-button").click(function(){
+		$("#page_output").text("Welcome");
+	});
+});
+
+
+</script>
+</head>
+<body>
+<p>
+	<h5>EXERCICE: CREATING AND MANIPULATING A WEB PAGE</h5>
+</p>
+
+<button id="my-button">Click me</button>
+<p id="page_output">My paragraph</p>
+
+</body>
+</html>
